@@ -23,7 +23,8 @@
 # print(opgl)
 import turtle
 from turtle import Turtle, Screen
-import random
+import secrets
+
 febe = Turtle()
 turtle.colormode(255)
 
@@ -36,7 +37,7 @@ febe.hideturtle()
 febe.setheading(0)
 def colour():
     for i in range(10):
-        febe.dot(20, random.choice(color_list))
+        febe.dot(20, secrets.SystemRandom().choice(color_list))
         febe.forward(50)
 
 def reset():
